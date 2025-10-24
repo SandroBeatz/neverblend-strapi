@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_product_prices",
+  "info": {
+    "displayName": "Price",
+    "icon": "database"
+  },
+  "options": {},
+  "attributes": {
+    "current": {
+      "type": "decimal"
+    },
+    "old": {
+      "type": "decimal"
+    }
+  },
+  "config": {}
+}

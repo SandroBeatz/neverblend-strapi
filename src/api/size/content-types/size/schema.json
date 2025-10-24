@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "variant": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product-variant.product-variant",
-      "inversedBy": "sizes"
-    },
     "label": {
       "type": "string",
       "required": true
@@ -25,8 +19,8 @@
     "quantity": {
       "type": "integer",
       "required": true,
-      "min": 0,
-      "default": 0
+      "default": 0,
+      "min": 0
     }
   }
 }

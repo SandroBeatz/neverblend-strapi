@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_product_sizes",
+  "info": {
+    "displayName": "Size",
+    "icon": "scissors"
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "string",
+      "required": true
+    },
+    "sku": {
+      "type": "string"
+    },
+    "stock_level": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

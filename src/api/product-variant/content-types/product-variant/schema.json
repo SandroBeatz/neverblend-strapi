@@ -8,9 +8,13 @@
     "description": "Product color variants with gallery"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "product": {
       "type": "relation",
@@ -18,38 +22,59 @@
       "target": "api::product.product",
       "inversedBy": "variants"
     },
-    "color_name": {
+    "title": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "color": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "product.color",
+      "repeatable": false,
       "required": true
     },
-    "color_hex": {
-      "type": "string",
-      "required": true,
-      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
-    },
-    "sku": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "price": {
-      "type": "decimal",
-      "required": true,
-      "min": 0
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "product.price",
+      "repeatable": false,
+      "required": true
+    },
+    "sizes": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "product.size",
+      "repeatable": true,
+      "required": true
     },
     "gallery": {
       "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "multiple": true,
       "required": false,
       "allowedTypes": [
         "images"
       ]
-    },
-    "sizes": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::size.size",
-      "mappedBy": "variant"
     }
   }
 }
